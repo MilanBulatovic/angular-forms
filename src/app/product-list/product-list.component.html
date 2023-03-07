@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="wrapper" ngModelGroup="userData" #userData="ngModelGroup">
+    <label for="username">Username</label>
+    <input type="text" name="username" ngModel />
+    <label for="password">Password</label>
+    <input type="password" name="pasword" ngModel />
+    <label for="email">Email</label>
+    <input type="email" name="email" ngModel />
+    <label for="newsletter">Subscribe to our Newsletter</label>
+    <input type="radio" name="newsletter" ngModel />
+    <label for="accepted">Do you accept our terms</label>
+    <input type="checkbox" name="accepted" ngModel />
+    <label for="message">Message</label>
+    <textarea name="message" rows="3" ngModel></textarea>
+    <button type="button">Submit</button>
+  </div>
+</form>
+<div class="col">
+  <h3>Your data:</h3>
+  <p>Username:</p>
+  <p>Email:</p>
+  <p>Secret Question:</p>
+  <p>Answer:</p>
+  <p>Gender:</p>
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
