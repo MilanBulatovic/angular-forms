@@ -7,21 +7,22 @@
     <label for="email">Email</label>
     <input type="email" name="email" ngModel />
     <label for="newsletter">Subscribe to our Newsletter</label>
-    <input type="radio" name="newsletter" ngModel />
+    <input type="radio" name="newsletter" ngModel [value]="yes" />
     <label for="accepted">Do you accept our terms</label>
     <input type="checkbox" name="accepted" ngModel />
     <label for="message">Message</label>
     <textarea name="message" rows="3" ngModel></textarea>
-    <button type="button">Submit</button>
+    <button type="submit">Submit</button>
   </div>
 </form>
-<div class="col">
+<div class="col" *ngIf="submitted">
   <h3>Your data:</h3>
-  <p>Username:</p>
-  <p>Email:</p>
-  <p>Secret Question:</p>
-  <p>Answer:</p>
-  <p>Gender:</p>
+  <p>Username: {{ user.username }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Password: {{ user.password }}</p>
+  <p>Newsletter: {{ user.newsletter }}</p>
+  <p>Accepted: {{ user.accepted }}</p>
+  <p>Message: {{ user.message }}</p>
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
